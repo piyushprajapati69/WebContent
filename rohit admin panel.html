@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/admin_portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/admin_portal.js">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">  
+    <!-- CSS property to create interactive  
+        calculator interface -->  
+    <style>  
+    html {  
+  height: 100vh;  
+  display:flow-root;  
+  align-items: center;  
+  justify-content: center;  
+  background-color: #2d3436;  
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);  
+  font-family: 'Cookie', cursive;  
+}  
+.title {  
+margin-bottom: 10px;  
+padding: 5px 0;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color:floralwhite;  
+font-family: 'Cookie', cursive;  
+}  
+input[type=button] {  
+  width: 60px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  margin: 5px;  
+  box-sizing: border-box;  
+  background: #ecedef;  
+  border: none;  
+  font-size: 30px;  
+  line-height: 30px;  
+  border-radius: 50%;  
+  font-weight: 700;  
+  color: #5E5858;  
+  cursor: pointer;    
+}  
+input[type=text] {  
+  width: 270px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  box-sizing: border-box;  
+  border: none;  
+  background: none;  
+  color: red;  
+  text-align: right;  
+  font-weight: 700;  
+  font-size: 60px;  
+  line-height: 60px;  
+  margin: 0 25px;  
+  }  
+.calculator {  
+  background-color: #c0c0c0;  
+  box-shadow: 0px 0px 0px 10px #666;  
+  border: 5px solid black;  
+  border-radius: 10px;  
+}  
+#display {  
+  height: 40px;  
+  text-align: right;  
+  background-color: black;  
+  border: 3px solid white;  
+  font-size: 18px;  
+  left: 2px;  
+  top: 2px;  
+  color: red;  
+}  
+.btnTop {  
+  color: white;  
+  background-color: #6f6f6f;  
+  font-size: 14px;  
+  margin: auto;  
+  width: 50px;  
+  height: 25px;  
+}     
+    </style>  
+    <title>Library Management System</title>
+  </head>
+  <body>
+    <!-- logout button -->
+  
+    <div  >
+      <a href="/p.html" class="BUTTON" style="color:#fff ;">Logout</a>
+      <!-- <button class="" id="log_button">Logout</button> -->
+    </div>
+    
+    <div class=main_header>
+      <div class="image_user">
+        <!-- user image -->
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="75" height="75"
+        viewBox="0 0 192 192"
+        style=" fill:#ffffff;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><path d="M96,192c-53.01934,0 -96,-42.98066 -96,-96v0c0,-53.01934 42.98066,-96 96,-96v0c53.01934,0 96,42.98066 96,96v0c0,53.01934 -42.98066,96 -96,96z" fill="#cccccc"></path><g fill="#666666"><g id="surface1"><path d="M96,40.32c-15.38812,0 -27.84,12.45188 -27.84,27.84c0,15.38813 12.45188,27.84 27.84,27.84c15.38813,0 27.84,-12.45187 27.84,-27.84c0,-15.38812 -12.45187,-27.84 -27.84,-27.84zM75.3375,105.7875c-26.29031,7.96594 -35.0175,29.58 -35.0175,29.58v16.3125h111.36v-16.3125c0,0 -8.72719,-21.61406 -35.0175,-29.58c-1.44094,10.14094 -10.14094,18.0525 -20.6625,18.0525c-10.52156,0 -19.22156,-7.91156 -20.6625,-18.0525z"></path></g></g></g></svg>
+        <h4 style="color: #fff;">My Profile</h4>
+      </div>
+
+      <div class="heading">
+            <strong> <center>Online Library (Admin) Portal</center></strong><br<br
+      </div>
+
+    </div>
+
+    <hr>
+    <center>
+    <div class="btn">
+        <table>
+          <ol>
+           <button class="BUTTON"  onclick="location.href='add_book.html'">Add Books</button>
+          <button class="BUTTON"  onclick="location.href='#'">Submit Books</button>
+          <button class="BUTTON"  onclick="location.href='#'">Show Students</button>
+          <button class="BUTTON"  onclick="location.href='#'">Show  Books</button> 
+          <button class="BUTTON"  onclick="location.href='#'">Issue Books</button>
+       </ol> </table>
+    </div>
+</center>
+<div class = "title"  align="center">  
+  Fine Calculator  
+</div>  
+<form name="Calculator" class = "calculator" >  
+<table border="2" align="center" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0">  
+<tr>  
+<td>  
+<input type="text" name="Input" Size="35" id="display">  
+<br>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<input type="button" name = "one" style="font-size:30px" value=" 1 " OnClick="Calculator.Input.value += '1'">  
+<input type="button" name = "two" style = "font-size:30px" value=" 2 " OnCLick="Calculator.Input.value += '2'">  
+<input type="button" name = "three" style="font-size:30px" value=" 3 " OnClick="Calculator.Input.value += '3'">  
+<input type="button" name="add" class ="btnTop" style="font-size:30px" value=" + " OnClick="Calculator.Input.value += ' + '">  
+<br>  
+<input type="button" name = "four" style="font-size:30px" value=" 4 " OnClick="Calculator.Input.value += '4'">  
+<input type="button" name = "five" style="font-size:30px" value=" 5 " OnCLick="Calculator.Input.value += '5'">  
+<input type="button" name = "six" style="font-size:30px" value=" 6 " OnClick="Calculator.Input.value += '6'">  
+<input type="button" name = "minus" style="font-size:30px" value=" - " OnClick="Calculator.Input.value += ' - '">  
+<br>  
+<input type="button" name = "seven" style="font-size:30px" value=" 7 " OnClick="Calculator.Input.value += '7'">  
+<input type="button" name = "eight" style="font-size:30px" value=" 8 " OnCLick="Calculator.Input.value += '8'">  
+<input type="button" name = "nine" style="font-size:30px" value=" 9 " OnClick="Calculator.Input.value += '9'">  
+<input type="button" name = "mul" style="font-size:30px" value=" * "   
+OnClick="Calculator.Input.value += ' * '">  
+<br>  
+<input type="button" name = "clear" style="font-size:30px" value=" c " OnClick="Calculator.Input.value = ''">  
+<input type="button" name="zero" style="font-size:30px" value=" 0 " OnClick="Calculator.Input.value += '0'">  
+<input type="button" name="DoIt" style="font-size:30px" value=" = " OnClick="Calculator.Input.value = eval(Calculator.Input.value)">  
+<input type="button" name="div" style="font-size:30px" value=" / " OnClick="Calculator.Input.value += ' / '">  
+<br>  
+</td>  
+
+</tr>  
+</table>  
+</form>  
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://gpblibrary-23efd-default-rtdb.firebaseio.com/Teachers"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <!-- <?php
+        $con=mysqli_connect('localhost','root','','first');
+        if(isset($_POST['log']))
+        {
+            $mail=$_Post['Email'];
+            $pass=$_Post['Password'];
+            $query="insert into administrator_login(Email,Password) values ('$mail','$pass')";
+            $run=mysqli_query($von,$query);
+        } 
+        ?>-->
+  </body>
+</html>
